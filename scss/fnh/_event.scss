@@ -1,0 +1,60 @@
+@charset 'utf-8';
+
+.news{
+    margin-bottom: 80px;
+    .event {
+        padding: 1rem 0;
+        display: table;
+    }
+    hr{
+        border-color: #f1f1f1;
+    }
+    .event-ph {
+        width: 180px;
+        padding-right: 1rem;
+        @media screen and (max-width: 39.9375em) {
+            display: none;
+        }
+    }
+
+    .event-desc {
+        text-align: left;
+        display: table-cell;
+        vertical-align: top;
+        .event-desc-header {
+            font-size: 18px;
+            margin: 0 0 0.5rem 0;
+            padding: 0;
+            a{
+                color: #454545;
+                font-weight: bold;
+            }
+        }
+        .event-desc-detail {
+            font-size: 14px;
+            margin: 0 0 0.25rem;
+            padding: 0;
+            color: #5e5e5e;
+        }
+        .event-desc-time {
+            font-weight: bold;
+        }
+        .label {
+            margin-right: 10px;
+            &.skyarc{
+                background: #0062B1;
+            }
+            &.fromnote{
+                background: #1d8b3b;
+            }
+        }
+        .event-date{
+            color: #999999;
+            padding-left: 0;
+            font-weight: bold;
+            margin-bottom: 0;
+            line-height: 1;
+            font-size: 12px;
+        }
+    }
+}
