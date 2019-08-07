@@ -19,6 +19,11 @@ gtag('js', new Date());
 
 gtag('config', 'UA-119342226-1');
 </script>
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+     function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
+</script>
 </head>
 <body>
 
@@ -49,7 +54,7 @@ gtag('config', 'UA-119342226-1');
 <div class="contact row medium-8 columns small-centered">
 
 <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" id="inquiry-form" method="POST" novalidate="novalidate">
-    <input name="oid" type="hidden" value="00D10000000J4l6" />
+    <input type=hidden name='captcha_settings' value='{"keyname":"reCAPTCHA2","fallback":"true","orgId":"00D10000000J4l6","ts":""}'>
     <input name="retURL" type="hidden" value="https://farmnote-hd.com/contact/finish.html" />
     <input id="lead_source" name="lead_source" type="hidden" value="Farmnote-Holdings" />
         <p>以下のフォームにご記入の上、送信ボタンをクリックしてください。</p>
@@ -116,6 +121,7 @@ gtag('config', 'UA-119342226-1');
             お電話（050-3852-4018）またはお問い合わせフォームからお願いいたします。</div>
 
 
+            <div class="g-recaptcha" data-sitekey="6LfierAUAAAAAHiAa3df1a8s7ZnLR11rAtlYT8Cn"></div><br> 
             <p class="text-center">
                 <input class="button" name="submit" value="上記の内容で送信する" type="submit">
             </p>
