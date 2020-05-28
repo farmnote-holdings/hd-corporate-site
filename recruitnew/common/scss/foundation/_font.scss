@@ -1,0 +1,64 @@
+@mixin sans() {
+	@if $mq-all{
+		// font-family: "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic Pro",  "Meiryo", verdana, "Osaka", "MS PGothic", Sans-Serif;
+		font-family: 'Noto Sans JP', "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic Pro",  "Meiryo", verdana, "Osaka", "MS PGothic", Sans-Serif;
+		// font-style: normal;
+		// font-weight: 500;
+	}
+	@if $mq-large or $mq-pc or $mq-tb{
+
+	}
+	@if $mq-sp{
+
+	}
+}
+@mixin sans2() {
+	@if $mq-all{
+		font-family: fot-tsukuardgothic-std, sans-serif;
+	}
+	@if $mq-large or $mq-pc or $mq-tb{
+
+	}
+	@if $mq-sp{
+
+	}
+}
+@mixin serif() {
+	@if $mq-all{
+		font-family: 'Noto Serif JP', serif;
+		font-weight: normal;
+	}
+}
+
+
+@mixin sansen() {
+	@if $mq-all{
+		font-family: 'Poppins', 'Noto Sans JP', "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic Pro",  "Meiryo", verdana, "Osaka", "MS PGothic", Sans-Serif;
+	}
+}
+
+@mixin sansen2() {
+	@if $mq-all{
+	}
+}
+
+
+
+@mixin serifen() {
+	@if $mq-all{
+		font-family: 'Prata', serif;
+	}
+}
+@mixin serifen2() {
+	@if $mq-all{
+		font-family: 'Arvo', serif;
+	}
+}
+
+
+@mixin hand() {
+	@if $mq-all{
+		font-family: 'Marck Script', cursive;
+	}
+}
+

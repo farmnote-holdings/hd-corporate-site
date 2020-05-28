@@ -1,0 +1,103 @@
+@if $mq-all{
+
+	/* reset */
+	html {
+		overflow-y: scroll;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	a{
+		box-sizing: border-box;
+	}
+	dt,th,h1,h2,h3,h4,h5,h6{
+		font-weight: 500;
+	}
+	section,figure,aside,header,footer,main,nav{
+		display: block;
+	}
+	address,caption,cite,code,dfn,em,strong,th,var {
+		font-style: normal;
+	}
+	table {
+		border-collapse:collapse;
+	}
+	caption,th {
+		text-align: left;
+	}
+	q:before,q:after {
+		content: '';
+	}
+	object,
+	embed {
+		vertical-align: top;
+	}
+	h1,h2,h3,h4,h5,h6 {
+		font-size: 100%;
+		font-weight: 500;
+	}
+	img,abbr,acronym,fieldset {
+		border: 0;
+	}
+	li {
+		list-style-type: none;
+	}
+	img{
+		vertical-align:bottom;
+	}
+	hr{
+		clear:both;
+		// border:none;
+		// background-color:#FFFFFF;
+	}
+
+	/* --------------------------------------------------------
+	01share style
+	-------------------------------------------------------- */
+	.tal{text-align:left;}
+	.tar{text-align:right;}
+	.tac{text-align:center;}
+	.fwb{font-weight:bold;}
+	.fwn{font-weight:normal;}
+
+	/*CSS Rollover*/
+	a.cssRoll img{
+		opacity:1;
+	}
+	a:hover.cssRoll img{
+		opacity:0.6;
+	}
+	body {
+		// font-size: 15px;
+		// font-family: "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", "YuGothic", "Meiryo", verdana, "Osaka", "MS PGothic", Sans-Serif;
+		font-weight: 500;
+		line-height: 1.7;
+		color:#373737;
+	}
+	a:link {
+		text-decoration: none;
+	}
+	a:visited {
+		text-decoration: none;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+	a:active {
+		text-decoration: none;
+	}
+
+	figure{
+		display: block;
+		-webkit-margin-before: 0;
+		-webkit-margin-after: 0;
+		-webkit-margin-start: 0;
+		-webkit-margin-end: 0;
+	}
+	em{
+		font-weight: bold;
+	}
+
+}

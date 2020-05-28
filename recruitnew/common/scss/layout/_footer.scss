@@ -1,0 +1,76 @@
+/* ---------------------------
+l-footer
+--------------------------- */
+.l-footer{
+	@if $mq-all{
+		background: $c0;
+		color: #fff;
+	}
+	@if $mq-large or $mq-pc or $mq-tb{
+		padding: 60px 0;
+	}
+	@if $mq-sp{
+		padding: 30px 0 75px;
+	}
+	&-links{
+		@if $mq-all{
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+		@if $mq-large or $mq-pc or $mq-tb{
+			margin-bottom: 60px;
+		}
+		@if $mq-sp{
+			margin-bottom: 20px;
+		}
+		&-item{
+			@if $mq-all{
+				font-size: 0.9rem;
+				&:not(:last-child){
+					margin-right: 2em;
+				}
+				a{
+					color: #fff;
+				}
+			}
+			@if $mq-large or $mq-pc or $mq-tb{
+				
+			}
+			@if $mq-sp{
+				
+			}
+		}
+	}
+	&-logo{
+		@if $mq-all{
+			text-align: center;
+			
+		}
+		@if $mq-large or $mq-pc or $mq-tb{
+			margin-bottom: 70px;
+			img{
+				width: 210px;
+			}
+		}
+		@if $mq-sp{
+			margin-bottom: 20px;
+			img{
+				width: 106px;
+			}
+		}
+	}
+
+	&-copyright{
+		@include sansen;
+		@if $mq-all{
+			text-align: center;
+			font-size: 0.8rem;
+		}
+		@if $mq-large or $mq-pc or $mq-tb{
+		}
+		@if $mq-sp{
+		}
+	}
+
+}

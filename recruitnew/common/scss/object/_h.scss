@@ -1,0 +1,140 @@
+/* ---------------------------
+h
+--------------------------- */
+.m-h{
+	&01{
+		&-wrap{
+			@if $mq-all{
+				text-align: center;
+				position: relative;
+				overflow: hidden;
+			}
+			@if $mq-large or $mq-pc or $mq-tb{
+				padding: 100px 0;
+			}
+			@if $mq-sp{
+				padding: 50px 0;
+			}
+		}
+		&-ja{
+			@if $mq-all{
+				font-weight: bold;
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 1;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				line-height: 1;
+				clip-path: circle(0% at 50% 50%);
+				transition: 2.2s;
+				.m-h01-wrap.on &{
+					transition-delay: 0.5s;
+					clip-path: circle(100% at 50% 50%);
+				}
+			}
+			@if $mq-large or $mq-pc or $mq-tb{
+				font-size: 1.8rem;
+			}
+			@if $mq-sp{
+				font-size: 1.2rem;
+			}
+		}
+		&-en{
+			@include sansen;
+			@if $mq-all{
+				// opacity: 0.1;
+				color: $c1;
+				line-height: 1;
+				overflow: hidden;
+				img{
+					transition: 0.8s cubic-bezier(0.61, -0.04, 0.28, 0.97);
+					transform: translateY(100%);
+				}
+				.m-h01-wrap.on &{
+					img{
+						transform: translateY(0%);
+					}
+				}
+			}
+			@if $mq-large or $mq-pc or $mq-tb{
+				img{
+					width: 500px;
+				}
+			}
+			@if $mq-sp{
+				img{
+					width: 400px;
+				}
+			}
+		}
+	}
+	&02{
+		@include sansen;
+		@if $mq-all{
+			text-align: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-weight: bold;
+
+			span{
+				position: relative;
+				display: block;
+				padding-bottom: 20px;
+				clip-path: circle(0% at 50% 50%);
+				transition: 0.5s cubic-bezier(0.72, 0.02, 1, 1);
+				&:after{
+					content:"";
+					display: block;
+					position: absolute;
+					left: 50%;
+					bottom: 0;
+					background: $c1;
+					width: 50px;
+					height: 2px;
+					margin-left: -25px;
+					transition: 0.6s 0.1s;
+					transform: scaleX(3);
+					opacity: 0;
+				}
+			}
+			&.on span{
+				clip-path: circle(120% at 50% 50%);
+				transition-delay: 0s;
+				&:after{
+					transform: scaleX(1);
+					opacity: 1;
+				}
+			}
+		}
+		@if $mq-large or $mq-pc or $mq-tb{
+			font-size: 1.9rem;
+			height: 200px;
+		}
+		@if $mq-sp{
+			font-size: 1.2rem;
+			height: 120px;
+		}
+	}
+	&03{
+		@if $mq-all{
+			text-align: center;
+			font-weight: bold;
+			line-height: 1.4;
+		}
+		@if $mq-large or $mq-pc or $mq-tb{
+			font-size: 3.6rem;
+			margin-bottom: 0.7em;
+		}
+		@if $mq-sp{
+			font-size: 1.8rem;
+			margin-bottom: 0.7em;
+		}
+
+	}
+
+}

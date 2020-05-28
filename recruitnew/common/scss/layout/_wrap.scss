@@ -1,0 +1,94 @@
+/* ---------------------------
+l-wrap
+--------------------------- */
+.l-wrap{
+	@include wrapin;
+	&-740{
+		@if $mq-large or $mq-pc or $mq-tb{
+			max-width: 820px;
+			margin: 0 auto;
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+	}
+	&-800{
+		@if $mq-large or $mq-pc or $mq-tb{
+			max-width: 880px;
+			margin: 0 auto;
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+	}
+	&-900{
+		@if $mq-large or $mq-pc or $mq-tb{
+			max-width: 980px;
+			margin: 0 auto;
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+	}
+	&-960{
+		@if $mq-large or $mq-pc or $mq-tb{
+			max-width: 1010px;
+			margin: 0 auto;
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+	}
+	&-980{
+		@if $mq-large or $mq-pc or $mq-tb{
+			max-width: 1060px;
+			margin: 0 auto;
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+	}
+	&-1000{
+		@if $mq-large or $mq-pc or $mq-tb{
+			max-width: 1080px;
+			margin: 0 auto;
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+	}
+	&-1100{
+		@if $mq-large or $mq-pc or $mq-tb{
+			max-width: 1180px;
+			margin: 0 auto;
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+	}
+	&-1280{
+		@if $mq-large or $mq-pc or $mq-tb{
+			max-width: 1360px;
+			width: 100%;
+			margin: 0 auto;
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+	}
+	&-1460{
+		@if $mq-large or $mq-pc or $mq-tb{
+			max-width: 1560px;
+			width: 100%;
+			margin: 0 auto;
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+	}
+}
+
+
+.l-wrap-sp{
+	@include wrapinsp;
+	@if $mq-all{
+
+	}
+	@if $mq-pc{
+
+	}
+	@if $mq-sp{
+
+	}
+}

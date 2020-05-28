@@ -1,0 +1,17 @@
+.u-onScrollAddClass{
+	@if $mq-all{
+		transition: 1.0s;
+		opacity: 0;
+		transform: translateY(50px);
+		&.on{
+			opacity: 1;
+			transform: translateY(0px);
+		}
+	}
+	@if $mq-large or $mq-pc or $mq-tb{
+		
+	}
+	@if $mq-sp{
+		
+	}
+}

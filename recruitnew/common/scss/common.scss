@@ -1,0 +1,69 @@
+@import 'foundation/media';
+// @import "animation/*";
+
+
+$mq-all: true;
+$mq-pc: false;
+$old-ie: false;
+$mq-tb: false;
+$mq-sp: false;
+$mq-large: false;
+@import 'all';
+
+
+
+
+@media screen and (min-width: $default-mq-pc-max-width) {
+/* ==========================================================================
+   Large
+   ========================================================================== */
+$mq-all: false;
+$mq-large: true;
+$mq-pc: false;
+$old-ie: false;
+$mq-tb: false;
+$mq-sp: false;
+@import 'all';
+}
+
+@media screen and (min-width: $default-mq-pc-min-width) and (max-width: $default-mq-pc-max-width),print {
+/* ==========================================================================
+   PC
+   ========================================================================== */
+$mq-all: false;
+$mq-large: false;
+$mq-pc: true;
+$old-ie: false;
+$mq-tb: false;
+$mq-sp: false;
+@import 'all';
+}
+
+@media screen and (min-width: $default-mq-tb-min-width) and (max-width: $default-mq-tb-max-width) {
+/* ==========================================================================
+   TB
+   ========================================================================== */
+$mq-all: false;
+$mq-large: false;
+$mq-pc: false;
+$old-ie: false;
+$mq-tb: true;
+$mq-sp: false;
+@import 'all';
+}
+
+
+@media screen and (max-width: $default-mq-sp-max-width) {
+/* ==========================================================================
+   SP
+   ========================================================================== */
+$mq-all: false;
+$mq-large: false;
+$mq-pc: false;
+$old-ie: false;
+$mq-tb: false;
+$mq-sp: true;
+@import 'all';
+}
+
+

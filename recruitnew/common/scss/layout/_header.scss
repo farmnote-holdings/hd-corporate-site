@@ -1,0 +1,96 @@
+/* ---------------------------
+l-header
+--------------------------- */
+.l-header{
+	@if $mq-all{
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 1;
+		width: 100%;
+		z-index: 10;
+		transition: 0.5s;
+		&.off{
+			transition: 0s;
+			transform: translateY(-105%);
+		}
+		.scrolled &{
+			background: $c1;
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+	}
+	@if $mq-large or $mq-pc or $mq-tb{
+		padding: 40px;
+		.scrolled &{
+		}
+	}
+	@if $mq-sp{
+		display: flex;
+		align-items: center;
+		height: 50px;
+		// background: #fff;
+		.scrolled &{
+		}
+	}
+	&-in{
+		@if $mq-all{
+			
+		}
+		@if $mq-large or $mq-pc or $mq-tb{
+		}
+		@if $mq-sp{
+			width: 100%;
+		}
+	}
+	&-clear{
+		@if $mq-all{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		@if $mq-large or $mq-pc or $mq-tb{
+		}
+		@if $mq-sp{
+			.scrolled &{
+				height: 50px;
+			}
+		}
+	}
+	&-logo{
+		@if $mq-all{
+			a{
+				position: relative;
+			}
+		}
+		@if $mq-large or $mq-pc or $mq-tb{
+			img{
+				width: 156px;
+			}
+			.scrolled &{
+			}
+		}
+		@if $mq-tb{
+			img{
+				width: 120px;
+			}
+			.scrolled &{
+			}
+		}
+		@if $mq-sp{
+			padding-left: 18px;
+			padding-top: 3px;
+			img{
+				width: 95px;
+			}
+			.scrolled &{
+			}
+			&:before{
+				border-left: 60px solid $c1;
+				border-right: 60px solid transparent;
+				border-top: 40px solid $c1;
+				border-bottom: 40px solid transparent;
+			}
+		}
+	}
+}

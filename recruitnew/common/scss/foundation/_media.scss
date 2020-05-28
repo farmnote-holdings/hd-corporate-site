@@ -1,0 +1,110 @@
+// # Media Queries
+//
+// ## Breakpoints (Window Size)
+//
+// 0-480   : [Smartphone]
+//           iPhone3/4/5(Portrait), iPhone3/4(Landscape)
+//           Most Android Phone(Portrait)
+// 481-800 : [Tablet, Smartphone(Landscape)]
+//           iPhone5(Landscape), iPad(Portrait)
+//           Most Android Phone(Landscape)
+//           Newer Android Tablet(Portrait)
+// 801+    : Default, iPad(Landscape), Newer Android Tablet(Landscape)
+//  OR 801-1024
+// 1121+   : Large Window Size, Newer Android Tablet(Landscape)
+
+// ## Variables
+$mq-all    : null !default;
+$mq-sp     : null !default;
+$mq-tb : null !default;
+$mq-spc : null !default;
+$mq-pc: null !default;
+$mq-large  : null !default;
+$old-ie    : null !default;
+
+$default-mq-sp-max-width     : 767px !default;
+$default-mq-tb-min-width : $default-mq-sp-max-width + 1 !default;
+$default-mq-tb-max-width : 1024px !default;
+$default-mq-pc-min-width: $default-mq-tb-max-width + 1 !default;
+$default-mq-large-min-width  : 1400px !default;
+$default-mq-pc-max-width: null !default;
+$default-mq-pc-max-width: $default-mq-large-min-width - 1 !default;
+
+// ## Wrapper
+@mixin mq {
+    @include mq-all     { @content; }
+    // @include mq-large   { @content; }
+    @include mq-pc { @content; }
+    @include mq-spc { @content; }
+    @include mq-tb  { @content; }
+    @include mq-sp      { @content; }
+}
+
+// ## For All
+@mixin mq-all {
+    $_tmp: $mq-all;
+    $mq-all: true;
+    @content;
+    $mq-all: $_tmp;
+}
+
+// ## For Smartphones
+@mixin mq-sp(
+    $max: $default-mq-sp-max-width
+) {
+    $_tmp: $mq-sp;
+    $mq-sp: true;
+    @media only screen and (max-width:#{$max}) {
+        @content;
+    }
+    $mq-sp: $_tmp;
+}
+
+// ## For Tablets
+@mixin mq-tb(
+    $max: $default-mq-tb-max-width
+) {
+    $_tmp: $mq-tb;
+    $mq-tb: true;
+    @media only screen and (max-width:#{$max}) {
+        @content;
+    }
+    $mq-tb: $_tmp;
+}
+
+// ## For old-ie
+@mixin old-ie {
+  $_tmp: $old-ie;
+  $old-ie: false;
+  @content;
+  $old-ie: $_tmp;
+}
+
+// ## For PC (default)
+@mixin mq-pc(
+    $min: $default-mq-pc-min-width,
+    $max: $default-mq-pc-max-width
+) {
+    $_tmp: $mq-pc;
+    $mq-pc: true;
+    $_breakpoint: "(min-width:#{$min}) ";
+    @if not($max == null) {
+        $_breakpoint: $_breakpoint + "and (max-width:#{$max}) ";
+    }
+    @media only screen and #{$_breakpoint}{
+        @content;
+    }
+    $mq-pc: $_tmp;
+}
+
+// ## For Large Window
+@mixin mq-large(
+    $min: $default-mq-large-min-width
+) {
+    $_tmp: $mq-large;
+    $mq-large: true;
+    @media only screen and (min-width:#{$min}) {
+        @content;
+    }
+    $mq-large: $_tmp;
+}

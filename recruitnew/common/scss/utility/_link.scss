@@ -1,0 +1,52 @@
+/* ---------------------------
+link
+--------------------------- */
+.u-link{
+	&01{
+		@if $mq-all{
+			text-decoration: underline!important;
+			&:hover{
+				text-decoration: none!important;
+			}
+		}
+	}
+	&-newTab{
+		@if $mq-all{
+			&:after{
+				content:"";
+				width: 12px;
+				height: 12px;
+				display: inline-block;
+				background: url("../img/base/ico_newTab_c0.svg") center no-repeat;
+				background-size: contain;
+				margin-left: 4px;
+			}
+		}
+	}
+	&02{
+		@if $mq-all{
+			display: flex;
+			align-items: center;
+			a{
+				border: 1px solid $c9d;
+				display: flex;
+				align-items: center;
+			}
+			i{
+				display: inline-block;
+				width: 30px;
+				margin-right: 10px;
+			}
+		}
+		@if $mq-large or $mq-pc or $mq-tb{
+			a{
+				padding: 20px;
+			}
+		}
+		@if $mq-sp{
+			a{
+				padding: 12px;
+			}
+		}
+	}
+}

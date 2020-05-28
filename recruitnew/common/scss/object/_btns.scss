@@ -1,0 +1,105 @@
+/* ---------------------------
+btns1col
+--------------------------- */
+.m-btns1col{
+	@if $mq-all{
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+	}
+	@if $mq-large or $mq-pc or $mq-tb{
+		
+	}
+	@if $mq-sp{
+		
+	}
+	&-item{
+		@if $mq-all{
+			&:not(:last-child){
+				margin-bottom: 10px;
+			}
+			.m-btn01{
+				height: 100%;
+			}
+		}
+		@if $mq-large or $mq-pc or $mq-tb{
+			width: 600px;
+		}
+		@if $mq-sp{
+			width: 100%;
+			max-width: 280px;
+			
+		}
+	}
+}
+
+.m-alignRightBtn{
+	@if $mq-all{
+		display: flex;
+		justify-content: flex-end;
+	}
+}
+.m-btns2col{
+	@if $mq-all{
+		display: flex;
+		justify-content: space-between;
+		&.is-jcc{
+			justify-content: center;
+		}
+	}
+	@if $mq-large or $mq-pc or $mq-tb{
+		
+	}
+	@if $mq-sp{
+		
+	}
+	&-item{
+		@if $mq-all{
+			width: 48%;
+			.m-btn01{
+				height: 100%;
+			}
+			.m-btns2col.is-autoSize &{
+				width: auto;
+			}
+			.is-jcc &{
+				&:not(:last-child){
+					margin-right: 2%;
+				}
+			}
+		}
+		@if $mq-large or $mq-pc or $mq-tb{
+		}
+		@if $mq-sp{
+			
+		}
+	}
+}
+
+
+.m-btns3col{
+	@if $mq-all{
+		display: flex;
+		justify-content: space-between;
+	}
+	@if $mq-large or $mq-pc or $mq-tb{
+		
+	}
+	@if $mq-sp{
+		
+	}
+	&-item{
+		@if $mq-all{
+			width: 32%;
+			.m-btn01{
+				height: 100%;
+			}
+		}
+		@if $mq-large or $mq-pc or $mq-tb{
+		}
+		@if $mq-sp{
+			
+		}
+	}
+}

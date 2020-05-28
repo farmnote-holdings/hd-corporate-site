@@ -1,0 +1,100 @@
+.lapctbOnly {
+	@if $mq-sp {
+		display: none;
+	}
+}
+
+.pcOnly {
+	@if $mq-tb or $mq-sp {
+		display: none;
+	}
+}
+
+.tbOnly {
+	@if $mq-pc {
+		display: none;
+	}
+	@if $mq-sp {
+		display: none;
+	}
+}
+.spOnly {
+	@if $mq-large or $mq-pc or $mq-tb{
+		display: none;
+	}
+	@if $mq-tb{
+		display: none;
+	}
+}
+
+.tac{
+	@if $mq-all{
+		text-align: center!important;
+	}
+	@if $mq-pc{
+
+	}
+	@if $mq-sp{
+
+	}
+}
+
+
+
+#wrapper{
+	@if $mq-all{
+	}
+	@if $mq-large or $mq-pc or $mq-tb{
+	}
+	@if $mq-sp{
+	}
+}
+.m-mainContent{
+	@if $mq-all{
+		
+	}
+	@if $mq-large or $mq-pc{
+	}
+	@if $mq-tb or $mq-sp{
+	}
+	&-in{
+		@if $mq-all{
+
+		}
+		@if $mq-large or $mq-pc or $mq-tb{
+			max-width: 1300px;
+			margin: 0 auto;
+			padding-top: 1px;
+		}
+		@if $mq-sp{
+
+		}
+	}
+	&-bg01{
+		@if $mq-all{
+			background: url("../img/base/bg_02.png") 0 0;
+		}
+		@if $mq-large or $mq-pc or $mq-tb{
+			padding-bottom: 120px;
+		}
+		@if $mq-sp{
+			padding-bottom: 40px;
+		}
+	}
+}
+.m-mainContentMargin{
+	@if $mq-all{
+		
+	}
+	@if $mq-large or $mq-pc or $mq-tb{
+		
+	}
+	@if $mq-sp{
+		height: 50px;
+	}
+}
+.slick-slide{
+	@if $mq-all{
+		height: auto!important;
+	}
+}
